@@ -1,5 +1,6 @@
 plugins {
     id 'com.android.application'
+    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
 }
 
 android {
@@ -14,6 +15,10 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        Properties properties = new Properties()
+
+        properties.load(project.rootProject.file('local.properties').newDataInputStream())
+        manifestPlaceholders = [MAPS_API_KEY: "${properties.getProperty('MAPS_API_KEY')}"]
     }
 
     buildTypes {
@@ -40,4 +45,16 @@ dependencies {
     //bottom navigation bar
     implementation 'com.github.ismaeldivita:chip-navigation-bar:1.4.0'
     implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.4.0'
+
+    //Maps
+    implementation 'com.google.android.gms:play-services-maps:18.1.0'
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
+
+    //Permissions
+    implementation 'com.karumi:dexter:6.2.2'
+
+    //Markers
+    implementation'com.github.bumptech.glide:glide:3.7.0'
+    //noinspection GradleCompatible
+
 }

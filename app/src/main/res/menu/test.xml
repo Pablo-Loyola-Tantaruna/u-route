@@ -9,7 +9,7 @@
         app:cnb_iconColor="@color/white"/>
 
     <item
-        android:id="@+id/activity"
+        android:id="@+id/explore"
         android:icon="@drawable/ic_compass"
         android:title="Explore"
         app:cnb_iconColor="@color/white"/>
@@ -21,7 +21,7 @@
         app:cnb_iconColor="@color/white" />
 
     <item
-        android:id="@+id/settings"
+        android:id="@+id/profile"
         android:icon="@drawable/ic_account"
         android:title="Profile"
         app:cnb_iconColor="@color/white" />

@@ -1,14 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments_bottom_nav.HomeFragment">
+    tools:context=".fragments_bottom_nav.HomeFragment"
+    android:layout_margin="30dp">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical">
 
-</FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:src="@drawable/ic_account"
+                android:backgroundTint="#FFF"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_marginRight="250dp"
+                android:layout_height="70dp" />
+            <ImageButton
+                android:src="@drawable/outline_menu"
+                android:backgroundTint="#FFF"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="70dp"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:text="Let's Enjoy"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:textColor="#4C4B4B"
+            android:text="Your Vacation!"/>
+    </LinearLayout>
+
+</RelativeLayout>

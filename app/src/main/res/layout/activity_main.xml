@@ -1,39 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <RelativeLayout
+    <androidx.drawerlayout.widget.DrawerLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <FrameLayout
-            android:id="@+id/container"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_above="@id/bottom_menu"></FrameLayout>
+            android:orientation="vertical">
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
-        <com.ismaeldivita.chipnavigation.ChipNavigationBar
-            android:id="@+id/bottom_menu"
+                        <FrameLayout
+                            android:id="@+id/container"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_above="@id/bottom_menu" />
+
+                        <com.ismaeldivita.chipnavigation.ChipNavigationBar
+                            android:id="@+id/bottom_menu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/orange"
+                            android:elevation="16dp"
+                            android:padding="8dp"
+                            app:cnb_addBottomInset="true"
+                            app:cnb_addLeftInset="true"
+                            app:cnb_addRightInset="true"
+                            app:cnb_menuResource="@menu/test"
+                            app:cnb_orientationMode="horizontal"
+                            app:cnb_unselectedColor="#FFF" />
+
+
+                    </RelativeLayout>
+                </FrameLayout>
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+        </LinearLayout>
+    </androidx.drawerlayout.widget.DrawerLayout>
+    <include android:id="@+id/bottomJsoft"
+        android:visibility="gone"
+        layout="@layout/bottomsheet_layout"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+    <!--
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".MainActivity">
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_alignParentBottom="true"
-            android:background="@color/orange"
-            android:elevation="16dp"
-            android:padding="8dp"
-            app:cnb_addBottomInset="true"
-            app:cnb_addLeftInset="true"
-            app:cnb_addRightInset="true"
-            app:cnb_menuResource="@menu/test"
-            app:cnb_orientationMode="horizontal"
-            app:cnb_unselectedColor="#FFF" />
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/bottom_menu" />
+
+            <com.ismaeldivita.chipnavigation.ChipNavigationBar
+                android:id="@+id/bottom_menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@color/orange"
+                android:elevation="16dp"
+                android:padding="8dp"
+                app:cnb_addBottomInset="true"
+                app:cnb_addLeftInset="true"
+                app:cnb_addRightInset="true"
+                app:cnb_menuResource="@menu/test"
+                app:cnb_orientationMode="horizontal"
+                app:cnb_unselectedColor="#FFF" />
 
 
-    </RelativeLayout>
-
-</FrameLayout>
+        </RelativeLayout>
+        <include android:id="@+id/bottomJsoft"
+            android:visibility="gone"
+            layout="@layout/bottomsheet_layout"/>
+    </FrameLayout>
+    -->
