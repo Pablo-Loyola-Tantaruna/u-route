@@ -24,5 +24,9 @@ S
 Mapp/src/androidTest/java/com/zea/company/route_u/ExampleInstrumentedTest.java,8\a\8a11d5d126d93ad329956400e27c87bb816bf3f8
 n
 >app/src/test/java/com/zea/company/route_u/ExampleUnitTest.java,1\8\18b8c0f90f5463cd5ca39748f9e518866fac2245
-k
-;app/src/main/java/com/zea/company/route_u/MainActivity.java,c\b\cb4f8d4391fdfc9e0821cf1f13d7568ba6486ef7
+{
+Kapp/src/main/java/com/zea/company/route_u/screen_logueo/ForgotActivity.java,2\b\2b5499b552ca96423ba4df84560bf5440b1d802f
+Ç
+Rapp/src/main/java/com/zea/company/route_u/screen_logueo/ResetPasswordActivity.java,9\e\9e35042685330e084ab37c6c678218487a840fe3
+Å
+Qapp/src/main/java/com/zea/company/route_u/screen_logueo/VerificationActivity.java,1\b\1b305aa0102b3bae7449889f62576668de28c18f

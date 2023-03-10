@@ -55,6 +55,7 @@ dependencies {
 
     //Markers
     implementation'com.github.bumptech.glide:glide:3.7.0'
-    //noinspection GradleCompatible
 
+    //Pin verify
+    implementation 'com.github.poovamraj:PinEditTextField:1.2.6'
 }

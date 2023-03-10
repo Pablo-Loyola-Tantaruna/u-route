@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:backgroundTint="@color/white"
+    android:orientation="vertical"
+    android:padding="30dp"
+    android:gravity="center_horizontal">
+    <ImageView
+        android:layout_marginTop="20dp"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/icon_register" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Verificación"
+        android:textAlignment="center"
+        android:textColor="#404040"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+    <TextView
+        android:textColor="#545454"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        android:text="Te hemos enviado un código de verificación\n al +51 961666545"/>
+
+    <com.poovam.pinedittextfield.SquarePinField
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusedByDefault="true"
+        android:textSize="20sp"
+        android:textSelectHandle="@drawable/text_handle"
+        app:noOfFields="4"
+        app:distanceInBetween="15dp"
+        app:fieldBgColor="#fff"
+        app:fieldColor="#A9A7A7"
+        app:highlightColor="#DC1515"
+        app:highlightType="currentField"
+        android:hint="----"
+        android:inputType="number"
+        android:textColorHint="#545454"
+        android:textColor="#545454"
+        android:id="@+id/squareField"
+        app:cornerRadius="10dp"
+        android:layout_marginTop="15dp"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_marginTop="20dp"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/second_button"
+        android:padding="10dp"
+        android:backgroundTint="@color/orange"
+        android:text="Continuar"
+        android:drawableRight="@drawable/arrow_right_circle"
+        android:textColor="@color/white"
+        android:textSize="16dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reenviar el código en:"
+            android:textColor="#545454" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 00:00"
+            android:textColor="#545454" />
+    </LinearLayout>
+</LinearLayout>

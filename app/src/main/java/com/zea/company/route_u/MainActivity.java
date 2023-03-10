@@ -8,18 +8,24 @@ import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
+import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.navigation.NavigationBarView;
@@ -72,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
         txtHorario = (TextView) findViewById(R.id.txtHorario);
         tapactionlayout = (LinearLayout) findViewById(R.id.tap_action_layout);
         mBottomSheetBehavior1 = BottomSheetBehavior.from(bottomSheet);
-        //mBottomSheetBehavior1.setPeekHeight(100);
+        mBottomSheetBehavior1.setPeekHeight(100);
         mBottomSheetBehavior1.setState(BottomSheetBehavior.STATE_COLLAPSED);
         mBottomSheetBehavior1.setBottomSheetCallback(new BottomSheetBehavior.BottomSheetCallback() {
             @Override
@@ -117,6 +123,20 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.favorites:
                     Log.d("PABLITO", "FAV " + id);
                     getSupportFragmentManager().beginTransaction().replace(R.id.container, favouriteFragment).commit();
+//                    final Dialog dialog = new Dialog(MainActivity.this);
+//                    dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+//                    dialog.setContentView(R.layout.bottomsheetlayout);
+//                    LinearLayout editLayout = dialog.findViewById(R.id.layoutEdit);
+//                    LinearLayout shareLayout = dialog.findViewById(R.id.layoutShare);
+//                    LinearLayout uploadLayout = dialog.findViewById(R.id.layoutUpload);
+//                    LinearLayout printLayout = dialog.findViewById(R.id.layoutPrint);
+//
+//                            dialog.show();
+//                            dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT);
+//                            dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+//                            dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
+//                            dialog.getWindow().setGravity(Gravity.BOTTOM);
+
                     break;
                 case R.id.profile:
                     Log.d("PABLITO", "PROF " + id);

@@ -2,4 +2,9 @@
     <string name="app_name">Route-U</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="acepto_todos_los_t_rminos_y_condiciones">Acepto Todos los Términos y Condiciones</string>
+    <string name="registrate_y_disfruta_ahora">Registrate y Disfruta Ahora</string>
+    <string name="familia_feliz">Familia Feliz</string>
+    <string name="username">Username</string>
+    <string name="e_mail">E-mail</string>
 </resources>
