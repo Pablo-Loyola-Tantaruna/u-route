@@ -7,18 +7,9 @@ import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.DialogInterface;
-import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
-import android.net.Uri;
 import android.os.Bundle;
-import android.provider.Settings;
 import android.util.Log;
-import android.view.Gravity;
-import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.Window;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -36,6 +27,7 @@ import com.karumi.dexter.listener.PermissionDeniedResponse;
 import com.karumi.dexter.listener.PermissionGrantedResponse;
 import com.karumi.dexter.listener.PermissionRequest;
 import com.karumi.dexter.listener.single.PermissionListener;
+import com.zea.company.route_u.databinding.ActivityMainBinding;
 import com.zea.company.route_u.fragments_bottom_nav.ExploreFragment;
 import com.zea.company.route_u.fragments_bottom_nav.FavouriteFragment;
 import com.zea.company.route_u.fragments_bottom_nav.HomeFragment;
@@ -43,6 +35,7 @@ import com.zea.company.route_u.fragments_bottom_nav.ProfileFragment;
 
 public class MainActivity extends AppCompatActivity {
 
+//    ActivityMainBinding mainBinding;
     boolean isPermissionGranted = false;
     private BottomSheetBehavior mBottomSheetBehavior1;
     ChipNavigationBar navigationBar;
@@ -51,13 +44,9 @@ public class MainActivity extends AppCompatActivity {
     ExploreFragment exploreFragment = new ExploreFragment();
     ProfileFragment profileFragment = new ProfileFragment();
     FavouriteFragment favouriteFragment = new FavouriteFragment();
-    ImageView imgmarker;
     LinearLayout tapactionlayout;
-    View white_forground_view;
     View bottomSheet;
     TextView txtnombre_local, txtDireccion, txtHorario;
-    private Marker marcador;
-    private static final float camera_zoom = 15;
 
 
     @SuppressLint("MissingInflatedId")
@@ -65,17 +54,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+//        mainBinding = ActivityMainBinding.inflate(getLayoutInflater());
+//        View view = mainBinding.getRoot();
+//        setContentView(view);
         checkpermissions();
         if (isPermissionGranted) {
             checkGooglePayServices();
         }
-        View headerLayout1 = findViewById(R.id.bottomJsoft);
-        navigationBar = findViewById(R.id.bottom_menu);
-        bottomSheet = findViewById(R.id.bottomJsoft);
-        txtnombre_local = (TextView) findViewById(R.id.txtNombreLocal);
-        txtDireccion = (TextView) findViewById(R.id.txtDireccion);
-        txtHorario = (TextView) findViewById(R.id.txtHorario);
+//        View headerLayout1 = findViewById(R.id.bottomJsoft);
+//        bottomSheet = findViewById(R.id.bottomJsoft);
         tapactionlayout = (LinearLayout) findViewById(R.id.tap_action_layout);
         mBottomSheetBehavior1 = BottomSheetBehavior.from(bottomSheet);
         mBottomSheetBehavior1.setPeekHeight(100);
@@ -116,8 +103,8 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.explore:
                     Log.d("PABLITO", "EXPLO " + id);
-                    headerLayout1.setVisibility(View.VISIBLE);
-                    bottomSheet.setVisibility(View.VISIBLE);
+//                    headerLayout1.setVisibility(View.VISIBLE);
+//                    bottomSheet.setVisibility(View.VISIBLE);
                     getSupportFragmentManager().beginTransaction().replace(R.id.container, exploreFragment).commit();
                     break;
                 case R.id.favorites:

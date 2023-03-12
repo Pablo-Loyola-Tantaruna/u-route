@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "858210547230",
+    "project_id": "u-route-379712",
+    "storage_bucket": "u-route-379712.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:858210547230:android:07357d9b4a9f267e43200f",
+        "android_client_info": {
+          "package_name": "com.zea.company.route_u"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "858210547230-kdt8tbsg53nf5nif231jtoerph82k5jn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.zea.company.route_u",
+            "certificate_hash": "deaa447ccb79d693763b05c753f1830a42a843ac"
+          }
+        },
+        {
+          "client_id": "858210547230-d1dg7vjrvoc58bltb46h748nlslfthng.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_IlQaFplLpxCHAw2rw25R1GJZAabvaXw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "858210547230-d1dg7vjrvoc58bltb46h748nlslfthng.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

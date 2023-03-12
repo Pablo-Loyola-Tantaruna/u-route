@@ -12,10 +12,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
-import androidx.fragment.app.Fragment;
 
-import android.os.Looper;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,17 +20,8 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.LinearLayout;
 
-import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.location.FusedLocationProviderClient;
-import com.google.android.gms.location.LocationAvailability;
-import com.google.android.gms.location.LocationCallback;
 import com.google.android.gms.location.LocationRequest;
-import com.google.android.gms.location.LocationResult;
-import com.google.android.gms.location.LocationServices;
-import com.google.android.gms.location.LocationSettingsRequest;
-import com.google.android.gms.location.LocationSettingsResponse;
-import com.google.android.gms.location.LocationSettingsStatusCodes;
-import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -42,9 +30,6 @@ import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.zea.company.route_u.MainActivity;
 import com.zea.company.route_u.R;
 
 public class ExploreFragment extends SupportMapFragment implements OnMapReadyCallback {
@@ -110,7 +95,7 @@ private void dialog_bottom(GoogleMap map){
 
     final Dialog dialog = new Dialog(getContext());
     dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-    dialog.setContentView(R.layout.bottomsheetlayout);
+    dialog.setContentView(R.layout.bottomsheet_layout1);
     LinearLayout editLayout = dialog.findViewById(R.id.layoutEdit);
     LinearLayout shareLayout = dialog.findViewById(R.id.layoutShare);
     LinearLayout uploadLayout = dialog.findViewById(R.id.layoutUpload);
