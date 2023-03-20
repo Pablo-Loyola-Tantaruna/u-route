@@ -1,0 +1,5 @@
+
+m
+java:S1450	"WRemove the "retrofit" field and declare it as a local variable in the relevant methods.(ƒ¼Žò
+P
+java:S1118":Add a private constructor to hide the implicit public one.(Ô¼¼Â

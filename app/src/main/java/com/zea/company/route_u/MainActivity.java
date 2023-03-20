@@ -61,8 +61,9 @@ public class MainActivity extends AppCompatActivity {
         if (isPermissionGranted) {
             checkGooglePayServices();
         }
-//        View headerLayout1 = findViewById(R.id.bottomJsoft);
-//        bottomSheet = findViewById(R.id.bottomJsoft);
+        View headerLayout1 = findViewById(R.id.bottomJsoft);
+        navigationBar = findViewById(R.id.bottom_menu);
+        bottomSheet = findViewById(R.id.bottomJsoft);
         tapactionlayout = (LinearLayout) findViewById(R.id.tap_action_layout);
         mBottomSheetBehavior1 = BottomSheetBehavior.from(bottomSheet);
         mBottomSheetBehavior1.setPeekHeight(100);
@@ -93,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }});
         getSupportFragmentManager().beginTransaction().replace(R.id.container, homeFragment).commit();
-
+        navigationBar.setItemSelected(2131296514,true);
         navigationBar.setOnItemSelectedListener(id -> {
             switch (id) {
                 case R.id.home:

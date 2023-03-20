@@ -1,0 +1,21 @@
+
+a
+java:S1192="FDefine a constant instead of duplicating this literal "users" 4 times.(û…ç¹şÿÿÿÿ
+C
+java:S1604F"(Make this anonymous inner class a lambda(‚´´¢ùÿÿÿÿ
+>
+java:S1604X"(Make this anonymous inner class a lambda(„ÕÑ÷
+`
+java:S1659%"EDeclare "password" and all following declarations on a separate line.(¶‰Áøÿÿÿÿ
+V	java:S125!"<This block of commented-out lines of code should be removed.(ÁÀÍÉûÿÿÿÿ
+m
+java:S3776*"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(¨Œşÿÿÿÿ
+Q	java:S125<"<This block of commented-out lines of code should be removed.(Î–…Ä
+—
+java:S1186R"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ô°¤¦
+D
+java:S1172`".Remove this unused method parameter "context".(ß÷¼ü
+>
+java:S1185h"(Remove this method to simply inherit it.(´–ğ€
+R
+java:S1144{"7Remove this unused private "showDialogProgress" method.(£ ñûÿÿÿÿ

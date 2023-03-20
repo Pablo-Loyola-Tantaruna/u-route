@@ -53,9 +53,9 @@
             </androidx.coordinatorlayout.widget.CoordinatorLayout>
         </LinearLayout>
     </androidx.drawerlayout.widget.DrawerLayout>
-<!--    <include android:id="@+id/bottomJsoft"-->
-<!--        android:visibility="gone"-->
-<!--        layout="@layout/bottomsheet_layout"/>-->
+    <include android:id="@+id/bottomJsoft"
+        android:visibility="gone"
+        layout="@layout/bottomsheet_layout"/>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 

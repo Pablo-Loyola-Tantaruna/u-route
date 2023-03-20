@@ -9,12 +9,8 @@ L
 app/.gitignore,5\1\51e1c5d383dfaa35e0e7e5873a0a99355a86880f
 ;
 gradlew.bat,2\a\2a45a911a8f1836b0b6c5b758962572012d8f8c3
-A
-gradle.properties,2\a\2afbb999f001938c88fa43fc2ef52abf0f8213e4
 7
 gradlew,5\b\5bbfa66edb4db3c7c33c5181f43510990d3307f9
-X
-(gradle/wrapper/gradle-wrapper.properties,f\b\fbe448ebfc3eb2d4e308f6b8b043666f5b57235e
 :
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
@@ -32,5 +28,27 @@ Rapp/src/main/java/com/zea/company/route_u/screen_logueo/ResetPasswordActivity.j
 Qapp/src/main/java/com/zea/company/route_u/screen_logueo/VerificationActivity.java,1\b\1b305aa0102b3bae7449889f62576668de28c18f
 H
 app/google-services.json,f\d\fd8d34b142d02ec743a8efefefd2c097961666e9
-<
-build.gradle,f\0\f07866736216be0ee2aba49e392191aeae700a35
+}
+Mapp/src/main/java/com/zea/company/route_u/screen_logueo/RegisterActivity.java,d\d\dd3c4fe84040a058b0203cc4be5671883540792f
+z
+Japp/src/main/java/com/zea/company/route_u/screen_logueo/LoginActivity.java,5\4\54fa086cc3089d67d2be102aaa80fdac1d368fda
+p
+@app/src/main/java/com/zea/company/route_u/network/ApiClient.java,6\3\63de1a3efeaaca8e106b476d441c06e1bbd3c85a
+@
+app/build.gradle,f\4\f4a01d6a4fcb971362ec00a83903fd3902f52164
+A
+gradle.properties,2\a\2afbb999f001938c88fa43fc2ef52abf0f8213e4
+t
+Dapp/src/main/java/com/zea/company/route_u/model/ResponseGeneral.java,b\9\b9050fcfb4204e09d619bdae99ed6913057d3923
+o
+?app/src/main/java/com/zea/company/route_u/model/PlacePhoto.java,8\f\8fbcdf82d2cfde470cd0dd650dca7205b5d1cadf
+m
+=app/src/main/java/com/zea/company/route_u/model/Open_now.java,5\f\5fcd0ab0550d6143da372e9fdb577a7ff2a38542
+v
+Fapp/src/main/java/com/zea/company/route_u/network/ApiLocationMaps.java,a\7\a7d4790ddb8d542492abd7843eae4084a06e92a1
+l
+<app/src/main/java/com/zea/company/route_u/model/results.java,8\f\8f10d524e1b19882d74f884baaaeffee2f9602d4
+n
+>app/src/main/java/com/zea/company/route_u/model/Geometria.java,e\5\e5821f8e1c3fc9fbb3076ca598b43acc342ae217
+{
+Kapp/src/main/java/com/zea/company/route_u/network/DirectionsJSONParser.java,f\3\f3034c1dffc528f8a99aa5d1c0cb371a42905c1f

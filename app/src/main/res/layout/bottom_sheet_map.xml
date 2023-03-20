@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottomSheetLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_close_24"
+        android:layout_alignParentTop="true"
+        android:backgroundTint="@color/colorPrimary"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="220dp"
+        android:layout_marginEnd="20dp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:src="@drawable/e" />
+
+        <TextView
+            android:id="@+id/TitleBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/segoeuibold"
+            android:padding="10dp"
+            android:text="Cerro Cristobal"
+            android:textColor="#000"
+            android:textSize="35sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp"
+            android:paddingEnd="20dp"
+            android:paddingStart="20dp"
+            android:paddingTop="10dp"
+            android:text="THis simple ceramic dinner set is composed of 2 plates and 1 large bowl in a variety of finishes to match your style."
+            android:textSize="17sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="#C7C6C6" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:drawableStart="@drawable/baseline_location_on_24"
+            android:drawablePadding="16dp"
+            android:padding="15dp"
+            android:paddingStart="20dp"
+            android:text="3794 Pretty View Lane"
+            android:textColor="#000"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:drawableStart="@drawable/baseline_access_time_24"
+            android:drawablePadding="16dp"
+            android:padding="15dp"
+            android:paddingStart="20dp"
+            android:text="Tiempo estimado: 3 horas con 17 mins"
+            android:textColor="#000"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:drawableStart="@drawable/baseline_sensor_door_24"
+            android:drawablePadding="16dp"
+            android:padding="15dp"
+            android:paddingStart="20dp"
+            android:text="Se encuentra abierto"
+            android:textColor="#000"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:drawableStart="@drawable/baseline_star_rate_24"
+            android:drawablePadding="16dp"
+            android:padding="15dp"
+            android:paddingStart="20dp"
+            android:text="Tiene una puntuación de: 3.4"
+            android:textColor="#000"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:drawableStart="@drawable/map_search_outline"
+            android:drawablePadding="16dp"
+            android:padding="15dp"
+            android:paddingStart="20dp"
+            android:text="La distancia es de 5 kilometros"
+            android:textColor="#000"
+            android:textSize="15sp" />
+    </LinearLayout>
+</RelativeLayout>

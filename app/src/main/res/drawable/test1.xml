@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/allplaces"
+        android:title="Todos los lugares"
+        android:textColor="#000000" />
+    <item
+        android:id="@+id/oceania"
+        android:title="Oceania"
+        android:textColor="#000000" />
+
+    <item
+        android:id="@+id/europa"
+        android:title="Europa"
+        android:textColor="#000000"
+        app:cnb_iconColor="#000000"/>
+
+    <item
+        android:id="@+id/asia"
+        android:title="Asia"
+        android:textColor="#000000"/>
+
+    <item
+        android:id="@+id/america"
+        android:title="America"
+        android:textColor="#000000"/>
+
+</menu>
