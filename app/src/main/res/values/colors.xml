@@ -13,4 +13,7 @@
     <color name="activity">#673AB7</color>
     <color name="favorites">#E91E63</color>
     <color name="settings">#4CAF50</color>
+
+    <color name="black">#FF000000</color>
+    <color name="grey">#545454</color>
 </resources>

@@ -1,0 +1,42 @@
+
+v
+java:S1488K"`Immediately return this expression instead of assigning it to the temporary variable "fragment".(„ÙÄ§
+n	java:S116D"YRename this field "places_adapter" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(şÙ›„
+V	java:S125;"<This block of commented-out lines of code should be removed.(®ïÍãşÿÿÿÿ
+T
+java:S1172J"9Remove these unused method parameters "param1", "param2".(º«âˆüÿÿÿÿ
+>
+java:S1185Q"(Remove this method to simply inherit it.(ßìê¯
+S
+java:S1854Y"8Remove this useless assignment to local variable "view".(¸ĞÛúÿÿÿÿ
+D
+java:S1481Y")Remove this unused "view" local variable.(¸ĞÛúÿÿÿÿ
+V	java:S125_"<This block of commented-out lines of code should be removed.(°òñõøÿÿÿÿ
+Q	java:S125x"<This block of commented-out lines of code should be removed.(¢Œ¸®
+W	java:S125ˆ"<This block of commented-out lines of code should be removed.(¼è÷ïøÿÿÿÿ
+Q
+java:S2209š"5Change this instance-reference to a static reference.(Äè°»øÿÿÿÿ
+Y
+java:S1874œ"6Remove this use of "ProgressDialog"; it is deprecated.(çèò†úÿÿÿÿ8Ù”£¸ñ0
+Y
+java:S1874œ"6Remove this use of "ProgressDialog"; it is deprecated.(çèò†úÿÿÿÿ8Ü”£¸ñ0
+P
+java:S1874"2Remove this use of "setMessage"; it is deprecated.(ç‡ŸÇ8Ş”£¸ñ0
+V
+java:S1874Ÿ"8Remove this use of "setProgressStyle"; it is deprecated.(¥È„¿8à”£¸ñ0
+T
+java:S1874Ÿ"6Remove this use of "ProgressDialog"; it is deprecated.(¥È„¿8á”£¸ñ0
+S
+java:S1874Ÿ"5Remove this use of "STYLE_SPINNER"; it is deprecated.(¥È„¿8â”£¸ñ0
+V
+java:S1874 "3Remove this use of "setProgress"; it is deprecated.(í­æÑúÿÿÿÿ8ã”£¸ñ0
+s
+java:S3252Ò"WUse static access with "androidx.core.content.ContextCompat" for "checkSelfPermission".(¬µŸÿÿÿÿÿ
+s
+java:S3252Ò"WUse static access with "androidx.core.content.ContextCompat" for "checkSelfPermission".(¬µŸÿÿÿÿÿ
+N
+java:S1135Ó"2Complete the task associated to this TODO comment.(áÃæùÿÿÿÿ
+D
+java:S1068<"/Remove this unused "resultsList" private field.(æÊ×
+I
+java:S1068="3Remove this unused "responseGeneral" private field.(Â‡öÈ

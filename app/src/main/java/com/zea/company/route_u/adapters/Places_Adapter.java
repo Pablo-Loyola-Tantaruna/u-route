@@ -46,7 +46,7 @@ public class Places_Adapter extends RecyclerView.Adapter<Places_Adapter.ViewHold
     }
 
     public interface RSClickLongListener{
-        void selectedDescriptionPlace();
+        void selectedDescriptionPlace(results rs);
     }
 
     @NonNull
@@ -84,7 +84,7 @@ public class Places_Adapter extends RecyclerView.Adapter<Places_Adapter.ViewHold
         holder.imageView.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                rsLongClick.selectedDescriptionPlace();
+                rsLongClick.selectedDescriptionPlace(results.get(position));
                 return false;
             }
         });

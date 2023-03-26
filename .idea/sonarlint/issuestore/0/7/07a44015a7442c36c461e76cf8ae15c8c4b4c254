@@ -1,0 +1,28 @@
+
+a	java:S112…"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+C
+java:S1604k"(Make this anonymous inner class a lambda(Êœüûÿÿÿÿ
+k	java:S116C"VRename this field "TitleBottom" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µáÔ¸
+_
+java:S1659<"IDeclare "jsonLocation" and all following declarations on a separate line.( ä”‰
+a
+java:S1659C"KDeclare "txtdescription" and all following declarations on a separate line.(µáÔ¸
+E
+java:S1659H"*Declare "latilongdest" on a separate line.(ëìçÿÿÿÿÿÿ
+V	java:S125V"<This block of commented-out lines of code should be removed.(÷ıüÿÿÿÿ
+h
+java:S3776["RRefactor this method to reduce its Cognitive Complexity from 44 to the 15 allowed.(¡Œşø
+>	java:S108x")Either remove or fill this block of code.(”ı¾
+P
+java:S2209z"5Change this instance-reference to a static reference.(Äè°»øÿÿÿÿ
+Y
+java:S1117£"=Rename "jsonArray" which hides the field declared at line 61.(æ˜°ùÿÿÿÿ
+W	java:S125É"<This block of commented-out lines of code should be removed.(¼è÷ïøÿÿÿÿ
+s
+java:S3252Ü"WUse static access with "androidx.core.content.ContextCompat" for "checkSelfPermission".(¬µŸÿÿÿÿÿ
+s
+java:S3252Ü"WUse static access with "androidx.core.content.ContextCompat" for "checkSelfPermission".(¬µŸÿÿÿÿÿ
+C
+java:S1068B"-Remove this unused "uriSecond" private field.(§ƒµè
+C
+java:S1068G"(Remove this unused "ubic" private field.(Šê‹šşÿÿÿÿ

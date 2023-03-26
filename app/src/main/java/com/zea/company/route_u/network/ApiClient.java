@@ -15,7 +15,7 @@ public class ApiClient {
                 .addInterceptor(loggingInterceptor)
                 .build();
         retrofit = new Retrofit.Builder()
-                .baseUrl("https://maps.googleapis.com/maps/api/place/")
+                .baseUrl("https://maps.googleapis.com/maps/api/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(httpClient)
                 .build();

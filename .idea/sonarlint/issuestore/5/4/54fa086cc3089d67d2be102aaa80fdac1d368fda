@@ -1,9 +1,11 @@
 
 >
-java:S16047"(Make this anonymous inner class a lambda(³Ö×•
+java:S16048"(Make this anonymous inner class a lambda(³Ö×•
 C
-java:S1604&"(Make this anonymous inner class a lambda(ŠÉŒèúÿÿÿÿ
+java:S1604'"(Make this anonymous inner class a lambda(ŠÉŒèúÿÿÿÿ
 C
-java:S1604K"(Make this anonymous inner class a lambda(Žøœšüÿÿÿÿ
+java:S1604P"(Make this anonymous inner class a lambda(Žøœšüÿÿÿÿ
 >
-java:S11851"(Remove this method to simply inherit it.(´–ð€
+java:S11852"(Remove this method to simply inherit it.(´–ð€
+l
+java:S1874X"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(œƒƒ©ùÿÿÿÿ8ôÇ‰¼ñ0

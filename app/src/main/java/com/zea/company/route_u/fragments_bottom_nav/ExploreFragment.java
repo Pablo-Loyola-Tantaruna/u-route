@@ -35,6 +35,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.model.PolylineOptions;
 import com.google.android.gms.maps.model.SquareCap;
+import com.google.gson.Gson;
 import com.zea.company.route_u.BuildConfig;
 import com.zea.company.route_u.R;
 import com.zea.company.route_u.adapters.DescriptionMarks;
@@ -133,7 +134,7 @@ public class ExploreFragment extends SupportMapFragment implements OnMapReadyCal
                         Timber.d("ERROR UBIC: " + e);
                     }
                 }
-                googleMap.addMarker(new MarkerOptions().position(ubic).title("Posicion Actual"));
+                //googleMap.addMarker(new MarkerOptions().position(ubic).title("Posicion Actual")).;
                 if (bundleRequest) {
                     googleMap.moveCamera(CameraUpdateFactory.newLatLng(ubicResponse));
                     CameraPosition cameraPosition = new CameraPosition.Builder()
@@ -165,7 +166,9 @@ public class ExploreFragment extends SupportMapFragment implements OnMapReadyCal
         googleMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
             @Override
             public boolean onMarkerClick(@NonNull Marker marker) {
+                Bundle bundle = getArguments();
                 DescriptionMarks descriptionMarks = new DescriptionMarks();
+                descriptionMarks.setArguments(bundle);
                 descriptionMarks.show(getActivity().getSupportFragmentManager(), descriptionMarks.getTag());
                 return false;
             }

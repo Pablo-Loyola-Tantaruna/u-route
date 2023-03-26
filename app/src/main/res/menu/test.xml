@@ -14,11 +14,11 @@
         android:title="Explore"
         app:cnb_iconColor="@color/white"/>
 
-    <item
-        android:id="@+id/favorites"
-        android:icon="@drawable/ic_heart_color"
-        android:title="Favorites"
-        app:cnb_iconColor="@color/white" />
+<!--    <item-->
+<!--        android:id="@+id/favorites"-->
+<!--        android:icon="@drawable/ic_heart_color"-->
+<!--        android:title="Favorites"-->
+<!--        app:cnb_iconColor="@color/white" />-->
 
     <item
         android:id="@+id/profile"

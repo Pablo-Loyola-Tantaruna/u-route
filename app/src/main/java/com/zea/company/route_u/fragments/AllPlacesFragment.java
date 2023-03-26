@@ -1,6 +1,7 @@
 package com.zea.company.route_u.fragments;
 
 import android.Manifest;
+import android.app.ProgressDialog;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
@@ -20,6 +21,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.GridLayout;
 import android.widget.GridView;
@@ -52,7 +54,7 @@ import timber.log.Timber;
  * Use the {@link AllPlacesFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class AllPlacesFragment extends Fragment implements Places_Adapter.RSClickListener, Places_Adapter.RSClickLongListener{
+public class AllPlacesFragment extends Fragment implements Places_Adapter.RSClickListener, Places_Adapter.RSClickLongListener {
 
     //    GridView gridView;
     private List<results> resultsList;
@@ -149,17 +151,23 @@ public class AllPlacesFragment extends Fragment implements Places_Adapter.RSClic
 //                Timber.d("NADA FALLA POR AQUI YOU KNOW");
 //            }
 //        });
-        if (ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            return;
-        }
         LocationManager locationManager = (LocationManager) getActivity().getApplicationContext().getSystemService(getContext().LOCATION_SERVICE);
         LocationListener locationListener = location -> {
+            ProgressDialog progressDialog = new ProgressDialog(getActivity());
+            progressDialog.setCancelable(false);
+            progressDialog.setMessage("Loading");
+            progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+            progressDialog.setProgress(0);
+            progressDialog.show();
+
+            getActivity().getWindow().setFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE,
+                    WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
             lat = location.getLatitude();
             longi = location.getLongitude();
-            Timber.d("LATITUD: "+lat);
-            Timber.d("LONGITUD: "+longi);
-            latlong = lat + ","+longi;
-            Timber.d("VER: "+latlong);
+            Timber.d("LATITUD: " + lat);
+            Timber.d("LONGITUD: " + longi);
+            latlong = lat + "," + longi;
+            Timber.d("VER: " + latlong);
             Call<ResponseGeneral> call = ApiClient
                     .getPlaces()
                     .create(ApiLocationMaps.class)
@@ -176,25 +184,40 @@ public class AllPlacesFragment extends Fragment implements Places_Adapter.RSClic
 //                      Con ESTO PUEDO VER EL JSON QUE VIENE O LO QUE VIENE
                         Gson gson = new Gson();
                         String res = gson.toJson(response.body());
-                        Timber.d( "onResponse: " + res);
+                        Timber.d("onResponse: " + res);
 
                         ResponseGeneral responseGeneral1 = response.body();
                         List<results> results1 = responseGeneral1.getResultsArrayList();
                         places_adapter = new Places_Adapter(results1, getContext(), AllPlacesFragment.this::selectedPlace, AllPlacesFragment.this::selectedDescriptionPlace);
                         recyclerView.setAdapter(places_adapter);
+                        progressDialog.dismiss();
+                        getActivity().getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
+                        progressDialog.dismiss();
                     }
                 }
 
                 @Override
                 public void onFailure(Call<ResponseGeneral> call, Throwable t) {
-                    Timber.d("NADA DE NADA: "+t.getMessage());
-                    Timber.d("NOTHING TO NOTHING: "+t.getLocalizedMessage());
+                    progressDialog.dismiss();
+                    getActivity().getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
+                    Timber.d("NADA DE NADA: " + t.getMessage());
+                    Timber.d("NOTHING TO NOTHING: " + t.getLocalizedMessage());
                 }
             });
         };
 
 
-        locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER,50000,500,locationListener);
+        if (ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+        }
+        locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 50000, 500, locationListener);
     }
 
     @Override
@@ -212,8 +235,12 @@ public class AllPlacesFragment extends Fragment implements Places_Adapter.RSClic
     }
 
     @Override
-    public void selectedDescriptionPlace() {
+    public void selectedDescriptionPlace(results rs) {
+        Timber.d("EL NU: "+rs.getName());
+        Bundle bundle = new Bundle();
+        bundle.putString("RSULT",new Gson().toJson(rs));
         DescriptionMarks descriptionMarks = new DescriptionMarks();
+        descriptionMarks.setArguments(bundle);
         descriptionMarks.show(getActivity().getSupportFragmentManager(), descriptionMarks.getTag());
     }
 }

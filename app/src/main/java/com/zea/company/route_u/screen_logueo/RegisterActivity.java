@@ -22,6 +22,7 @@ import com.zea.company.route_u.databinding.ActivityRegisterBinding;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 
@@ -64,6 +65,12 @@ public class RegisterActivity extends AppCompatActivity {
                         if (snapshot.hasChild(username)) {
                             showDialogFailed(getApplicationContext(), "Usuario Existente", "El usuario ya existe coloque otro!");
                         } else {
+                            SharedPreferences preferences = getSharedPreferences("prefs",MODE_PRIVATE);
+                            SharedPreferences.Editor editor = preferences.edit();
+                            editor.putString("username",username);
+                            editor.putString("password",password);
+                            editor.putString("email",email);
+                            editor.commit();
                             databaseReference.child("users").child(username).child("username").setValue(username);
                             databaseReference.child("users").child(username).child("email").setValue(email);
                             databaseReference.child("users").child(username).child("dateRegister").setValue(new SimpleDateFormat("dd/MM/yyyy").format(new Date()));
@@ -92,7 +99,10 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
     }
-
+    @Override
+    public void onBackPressed() {
+        moveTaskToBack(true);
+    }
     private void showDialogFailed(Context context, String msjHead, String msjDesc) {
         PopupDialog.getInstance(RegisterActivity.this)
                 .setStyle(Styles.FAILED)
@@ -119,12 +129,5 @@ public class RegisterActivity extends AppCompatActivity {
                         startActivity(new Intent(context,LoginActivity.class));
                     }
                 });
-    }
-    private void showDialogProgress() {
-        PopupDialog.getInstance(RegisterActivity.this)
-                .setStyle(Styles.PROGRESS)
-                .setProgressDialogTint(R.color.orange)
-                .setCancelable(false)
-                .showDialog();
     }
 }

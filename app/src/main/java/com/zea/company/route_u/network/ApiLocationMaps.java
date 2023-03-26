@@ -10,11 +10,17 @@ import retrofit2.http.GET;
 import retrofit2.http.Query;
 
 public interface ApiLocationMaps {
-    @GET("nearbysearch/json?")
+    @GET("place/nearbysearch/json?")
     Call<ResponseGeneral> getNearbyLocation(
             @Query("location")String location,
             @Query("radius")String radius,
             @Query("type")String type,
+            @Query("key")String key
+    );
+    @GET("directions/json?mode-walking&")
+    Call<ResponseGeneral> getDataAbout(
+            @Query("origin")String location,
+            @Query("destination")String radius,
             @Query("key")String key
     );
 }

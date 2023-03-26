@@ -18,6 +18,7 @@ import com.zea.company.route_u.databinding.ActivityRegisterBinding;
 
 import android.app.Dialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 
@@ -55,6 +56,10 @@ public class LoginActivity extends AppCompatActivity {
                             .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
+                                    SharedPreferences preferences = getSharedPreferences("prefs",MODE_PRIVATE);
+                                    SharedPreferences.Editor editor = preferences.edit();
+                                    editor.putString("ISLOG","true");
+                                    editor.commit();
                                     PopupDialog.getInstance(LoginActivity.this)
                                             .setStyle(Styles.SUCCESS)
                                             .setHeading("LOGUEO EXITOSO")
@@ -78,5 +83,9 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), RegisterActivity.class));
             }
         });
+    }
+    @Override
+    public void onBackPressed() {
+        moveTaskToBack(true);
     }
 }
